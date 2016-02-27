@@ -11,7 +11,7 @@ export class SearchService {
     connections: Observable<Array<Connection>>;
 
     private _todosObserver: any;
-    private url = "http://transport.opendata.ch/v1/connections";
+    private url = "https://transport.opendata.ch/v1/connections";
     private _dataStore: {
         connections: Array<Connection>
     };
