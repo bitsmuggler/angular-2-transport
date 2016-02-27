@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <label for="from">From:</label>
+                <input id="from" #from type="text" class="form-control" />
+            </div>
+
+            <div class="col-sm-12">
+                <label for="to">To:</label>
+                <input id="to" #to type="text" class="form-control">
+            </div>
+
+            <div class="col-sm-12">
+                <div class="demo-block"></div>
+            </div>
+
+            <div class="col-sm-12">
+                <button class="btn btn-sm" (click)="onSearchConnection(from.value, to.value)">Search Connection</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <li *ngFor="#connection of connections;">{{connection.from.location.name}} {{connection.duration}}</li>
+    </div> 
+</div>   
+
