@@ -35,7 +35,6 @@ export class SearchService {
         params.set('to', searchData.to);
 
         return this.http.get(this.url, { search: params })
-            /*.map(response => {console.log(response.json())});*/
             .map(response => <Connection[]>response.json().connections)
             .subscribe(data => {
                 // Update data store
@@ -45,5 +44,4 @@ export class SearchService {
                 this._todosObserver.next(this._dataStore.connections);
             });
     }
-
 }
