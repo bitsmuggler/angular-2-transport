@@ -7,6 +7,3 @@ export class From {
      
      
 }
-
-
-Object
