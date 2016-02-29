@@ -35,8 +35,14 @@ export class SearchService {
         params.set('to', searchData.to);
 
         return this.http.get(this.url, { search: params })
-            .map(response => <Connection[]>response.json().connections)
+            .map(response => {
+                console.log(response.json());
+                return <Connection[]>response.json().connections;
+             })
             .subscribe(data => {
+                console.log(data);
+                console.log(data[0].from.departure);
+                console.log(data[0].from.departureTimestamp);
                 // Update data store
                 this._dataStore.connections = data;
 

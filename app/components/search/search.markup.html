@@ -8,7 +8,7 @@
             <div class="col-sm-8">
                 <div class="col-sm-12">
                     <label for="from">From:</label>
-                    <input id="from" #from type="text" class="form-control" />
+                    <input id="from" #from type="text" class="form-control" value="Zurich" />
                 </div>
             </div>
             <div class="col-sm-2">
@@ -21,7 +21,7 @@
             <div class="col-sm-8">
                 <div class="col-sm-12">
                     <label for="to">To:</label>
-                    <input id="to" #to type="text" class="form-control" />
+                    <input id="to" #to type="text" class="form-control" value="Lucerne" />
                 </div>
             </div>
             <div class="col-sm-2">
@@ -64,7 +64,8 @@
                         {{connection.from.location.name}}
                     </td>
                     <td>
-                        Test 2
+                        {{connection.from.departure | date:'dd.MM.yyyy HH:mm'}} <br/>
+                        {{connection.from.departureTimestamp | date:'HH:mm'}}
                     </td>
                     <td>
                         Test 3

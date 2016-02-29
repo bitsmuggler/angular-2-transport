@@ -1,8 +1,13 @@
 System.config({
-  baseURL: "/",
-  defaultJSExtensions: true,
-  transpiler: "typescript",
-  typescriptOptions: {
+  "baseURL": "/",
+  "transpiler": "typescript",
+  "paths": {
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*",
+    "*": "*.js"
+  },
+  "defaultJSExtensions": true,
+  "typescriptOptions": {
     "compilerOptions": {
       "target": "es5",
       "module": "system",
@@ -17,20 +22,18 @@ System.config({
     ],
     "compileOnSave": true
   },
-  paths: {
-    "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
-  },
-
-  packages: {
+  "packages": {
     "app": {
       "main": "bootstrap",
       "defaultJSExtensions": false,
       "defaultExtension": "ts"
     }
-  },
+  }
+});
 
-  map: {
+System.config({
+  "map": {
     "typescript": "npm:typescript@1.8.2"
   }
 });
+
