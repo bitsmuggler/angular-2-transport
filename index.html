@@ -2,14 +2,19 @@
 <head>
     <title>Angular 2 Transport Demo App</title>
 
-   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- inject:css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- endinject -->
 
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
+    <!-- inject:js -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
     <script src="node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.js"></script>
     <script src="node_modules/angular2/bundles/http.js"></script>
+    <!-- endinject -->
+    
+    <script src="config.js"></script>
 </head>
 <body>
     <app>
