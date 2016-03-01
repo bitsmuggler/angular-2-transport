@@ -22,10 +22,10 @@ Check out the demo on [Heroku](https://angular-2-transport.herokuapp.com)
 Start the node package manager.
     npm install
 
-As webserver we recommend the live-server
+We recommend the live-server as local development webserver.
     npm install live-server -g
     
-Or you can use the harp server. Harp is declared as npm dependency due to heroku.
+Or you can use the harp server. Harp is already declared as npm dependency due to heroku.
     node /node_modules/bin/harp server . --port 80
 or install it globally
     harp server . ---port 80
