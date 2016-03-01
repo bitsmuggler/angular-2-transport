@@ -87,7 +87,7 @@ fabric.properties
 dist
 
 #.settings
-.settings
+/.settings/*.*
 
 #javascript files in /app
 app/**/*.js
