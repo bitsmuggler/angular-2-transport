@@ -12,7 +12,7 @@ gulp.task('clean', function () {
 
 
 // TypeScript compile
-gulp.task('compile', function () {  
+gulp.task('compile', ['copy:assets'], function () {  
   return gulp
     .src(['app/**/*.ts'])
     .pipe(typescript(tscConfig.compilerOptions))
@@ -43,5 +43,5 @@ gulp.task('copy:assets', ['copy:libs'], function() {
 });*/
 
 
-gulp.task('build', ['clean', 'compile','copy:assets']);
+gulp.task('build', ['clean', 'compile']);
 gulp.task('default', ['build']);
