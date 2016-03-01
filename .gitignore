@@ -83,5 +83,10 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-#dist
+#dist-Directory
 dist
+
+#.settings
+.settings
+
+
