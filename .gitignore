@@ -89,4 +89,7 @@ dist
 #.settings
 .settings
 
+#javascript files in /app
+app/**/*.js
+
 

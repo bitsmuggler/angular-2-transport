@@ -12,11 +12,11 @@ gulp.task('clean', function () {
 
 
 // TypeScript compile
-gulp.task('compile', ['copy:assets'], function () {  
+gulp.task('compile', ['clean'], function () {  
   return gulp
     .src(['app/**/*.ts'])
     .pipe(typescript(tscConfig.compilerOptions))
-    .pipe(gulp.dest('dist/app'));
+    .pipe(gulp.dest('app'));
 });
 
 
@@ -43,5 +43,5 @@ gulp.task('copy:assets', ['copy:libs'], function() {
 });*/
 
 
-gulp.task('build', ['clean', 'compile']);
+gulp.task('build', ['compile']);
 gulp.task('default', ['build']);
