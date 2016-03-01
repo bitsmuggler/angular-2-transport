@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "author": "Patrick Roos",
   "license": "MIT",
+  "scripts": {
+    "postinstall": "gulp"
+  },
   "devDependencies": {
     "del": "^2.1.0",
     "gulp": "^3.9.0",
