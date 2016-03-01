@@ -20,15 +20,25 @@ Check out the demo on [Heroku](https://angular-2-transport.herokuapp.com)
 
 ## Local Development
 Start the node package manager.
-    npm install
+```
+npm install
+```
 
 We recommend the live-server as local development webserver.
-    npm install live-server -g
+```
+npm install live-server -g
+```
     
 Or you can use the harp server. Harp is already declared as npm dependency due to heroku.
-    node /node_modules/bin/harp server . --port 80
+```
+node /node_modules/bin/harp server . --port 80
+```
 or install it globally
-    harp server . ---port 80
+```
+npm install harp -g
+
+harp server . ---port 80
+```
 
 ## Running on heroku
 1. Create an heroku-app
