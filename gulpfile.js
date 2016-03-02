@@ -4,6 +4,8 @@ var typescript = require('gulp-typescript');
 var tscConfig = require('./tsconfig.json');
 var inject = require('gulp-inject');
 var gnf = require('gulp-npm-files');
+var watch = require('gulp-watch');
+var batch = require('gulp-batch');
 
 // clean the contents of the distribution directory
 gulp.task('clean', function () {
@@ -33,15 +35,12 @@ gulp.task('copy:assets', ['copy:libs'], function() {
              .pipe(gulp.dest('dist'))
 });
 
-/*gulp.task('inject:index', function () {
-   
-  var target = gulp.src('./index.html');
-  var sources = gulp.src(['./dist/lib/*.*'], {read: false});
- 
-  return target.pipe(inject(sources))
-    .pipe(gulp.dest('./dist'));
-});*/
-
+gulp.task('watch', function () {
+    watch('**/*.ts', batch(function (events, done) {
+        console.log('Typescript file was changed. Start transpiler...');
+        gulp.start('compile', done);
+    }));
+});
 
 gulp.task('build', ['compile']);
 gulp.task('default', ['build']);
