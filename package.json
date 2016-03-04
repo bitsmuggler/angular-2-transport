@@ -21,9 +21,7 @@
     "gulp-typescript": "^2.8.0",
     "typescript": "^1.5.0-beta",
     "gulp-inject": "^3.0.0",
-    "harp": "^0.20.1"
-  },
-  "devDependencies": {
+    "harp": "^0.20.1",
     "gulp-batch": "^1.0.5",
     "gulp-connect": "^3.1.0",
     "gulp-watch": "^4.3.5"
