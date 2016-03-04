@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var del = require('del');
 var typescript = require('gulp-typescript');
 var tscConfig = require('./tsconfig.json');
-var inject = require('gulp-inject');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
@@ -19,8 +18,7 @@ gulp.task('compile-ts', function() {
 });
 
 gulp.task('server:watch', ['compile-ts'], function() {  
-    gulp.watch("**/*.ts", 
-        { cwd : './', read:false, debounceDelay: 50 }, ['compile-ts']);    
+    gulp.watch("**/*.ts", { cwd : './', read:false, debounceDelay: 50 }, ['compile-ts']);    
 });
 
 gulp.task('server:browsersync', function () {  
@@ -39,15 +37,6 @@ gulp.task('server:browsersync', function () {
         },
         logFileChanges: false
     });
-});
-
-// watch files for changes and reload
-gulp.task('serve', function() {
-  browserSync({
-    server: {
-      baseDir: './'
-    }
-  });
 });
 
 gulp.task('build', ['compile-ts']);

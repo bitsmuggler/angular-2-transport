@@ -14,6 +14,7 @@
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "gulp": "^3.9.0",
+    "gulp-typescript": "^2.12.1",
     "gulp-watch": "^4.3.5",
     "harp": "^0.20.1",
     "reflect-metadata": "0.1.2",
