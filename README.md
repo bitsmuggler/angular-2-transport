@@ -1,4 +1,5 @@
 # angular-2-transport
+[![Build Status](https://travis-ci.org/paroos/angular-2-transport.svg?branch=master)](https://travis-ci.org/paroos/angular-2-transport)
 ![Heroku](https://heroku-badge.herokuapp.com/?app=angular-2-transport)
 [![Dependency Status](https://david-dm.org/paroos/angular-2-transport.svg)](https://david-dm.org/paroos/angular-2-transport)
 [![devDependency Status](https://david-dm.org/paroos/angular-2-transport.svg)](https://david-dm.org/mgechev/angular-2-transport#info=devDependencies)
