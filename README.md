@@ -1,5 +1,8 @@
 # angular-2-transport
 ![Heroku](https://heroku-badge.herokuapp.com/?app=angular-2-transport)
+[![Dependency Status](https://david-dm.org/paroos/angular-2-transport.svg)](https://david-dm.org/paroos/angular-2-transport)
+[![devDependency Status](https://david-dm.org/paroos/angular-2-transport.svg)](https://david-dm.org/mgechev/angular-2-transport#info=devDependencies)
+
 
 ## What is angular-2-transport?
 angular-2-transport is a demo app made with [Angular 2](http://wwww.angular.io). It shows some of the new Angular 2 core concepts and it can be used as scaffolding.
