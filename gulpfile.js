@@ -18,7 +18,10 @@ gulp.task('compile-ts', function() {
 });
 
 gulp.task('server:watch', ['compile-ts'], function() {  
-    gulp.watch("**/*.ts", { cwd : './', read:false, debounceDelay: 50 }, ['compile-ts']);    
+    gulp.watch(["**/*.ts", "!./node_modules/*.ts"], { cwd : './', read:false, debounceDelay: 50 }, ['compile-ts']);    
+    
+    //["./js/**/*.js", "!./js/vendor/*.js"]
+    
 });
 
 gulp.task('server:browsersync', function () {  

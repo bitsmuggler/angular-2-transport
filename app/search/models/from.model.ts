@@ -3,7 +3,4 @@ export class From {
      departureTimestamp: Date;
      location: Location;
      station: Location;
-     
-     
-     
 }

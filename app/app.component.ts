@@ -1,8 +1,8 @@
 
 import {Component, Injectable} from 'angular2/core';
-import {NavComponent} from "./navigation/nav.components";
-import {SearchComponent} from "./search/search.components";
-import {SearchService} from "./search/search.service";
+import {NavComponent} from "./navigation/components/header.component";
+import {SearchComponent} from "./search/components/search.component";
+import {SearchService} from "./search/services/search.service";
 import {HTTP_PROVIDERS} from "angular2/http";
 
 @Component({
@@ -16,5 +16,7 @@ import {HTTP_PROVIDERS} from "angular2/http";
 })
 export class AppComponent {
 
-    constructor() { }
+    constructor() { 
+        console.log('app component ctor. called.');
+    }
 }

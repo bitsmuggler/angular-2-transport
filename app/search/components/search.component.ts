@@ -1,11 +1,11 @@
 import {Injectable, Inject, Component} from 'angular2/core';
-import {SearchData} from './search.class';
-import {SearchService} from './search.service'
+import {SearchData} from '../models/search.model';
+import {SearchService} from '../services/search.service';
 
 @Component({
     selector: 'search',
-    templateUrl: "./app/components/search/search.markup.html",
-    styleUrls : [ "./app/components/search/search.style.css"],
+    templateUrl: "./app/search/components/search.component.html",
+    styleUrls : [ "./app/search/components/search.component.css"],
     providers: [SearchService]
 })
 export class SearchComponent {

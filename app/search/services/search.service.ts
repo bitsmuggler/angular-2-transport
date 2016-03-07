@@ -3,8 +3,8 @@ import {Http, Response, URLSearchParams} from 'angular2/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/share';
-import {SearchData} from './search.class';
-import {Connection} from './model/connection.class';
+import {SearchData} from '../models/search.model';
+import {Connection} from '../models/connection.model';
 
 @Injectable()
 export class SearchService {
