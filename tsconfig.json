@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "dist/app",
     "target": "ES5",
     "module": "system",
     "sourceMap": true,
@@ -10,9 +9,9 @@
     "removeComments": false,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noEmit": false
+    "noEmit": true
   },
-  "exclude": [
-    "node_modules"
+  "exclude" : [
+    "./node_modules"
   ]
 }

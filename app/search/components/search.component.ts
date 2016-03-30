@@ -22,7 +22,6 @@ export class SearchComponent {
         console.log('From: ' + searchData.from);
         console.log('To: ' + searchData.to);
         console.log(searchData);
-
         this.searchService.getConnections(searchData);
     }
 }

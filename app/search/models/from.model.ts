@@ -1,6 +1,6 @@
 export class From {
-     departure: Date;
-     departureTimestamp: Date;
+     departure: String;
+     departureTimestamp: String;
      location: Location;
      station: Location;
 }

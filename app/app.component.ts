@@ -15,7 +15,6 @@ import {HTTP_PROVIDERS} from "angular2/http";
    providers: [HTTP_PROVIDERS]
 })
 export class AppComponent {
-
     constructor() { 
         console.log('app component ctor. called.');
     }

@@ -17,7 +17,7 @@ export class SearchService {
     };
 
 
-    constructor( @Inject(Http) private http: Http) {
+    constructor(@Inject(Http) private http: Http) {
         console.log('ctor. called.');
         
         // Create Observable Stream to output our data

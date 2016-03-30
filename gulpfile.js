@@ -1,30 +1,23 @@
 var gulp = require('gulp');
 var del = require('del');
 var typescript = require('gulp-typescript');
-var tscConfig = require('./tsconfig.json');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var tsProject = typescript.createProject('tsconfig.json');
 
-// clean the contents of the distribution directory
-gulp.task('clean', function () {
-  return del('dist/**/*');
-});
-
-gulp.task('compile-ts', function() {    
-    gulp.src(['app/**/*.ts'])
-        .pipe(typescript(tscConfig.compilerOptions))
+gulp.task('transpile:ts', function() {
+    var tsResult = tsProject.src() // instead of gulp.src(...)
+        .pipe(typescript(tsProject))
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('server:watch', ['compile-ts'], function() {  
-    gulp.watch(["**/*.ts", "!./node_modules/*.ts"], { cwd : './', read:false, debounceDelay: 50 }, ['compile-ts']);    
-    
-    //["./js/**/*.js", "!./js/vendor/*.js"]
-    
+gulp.task('server:watch', ['transpile:ts'], function() {
+    console.log('starting server:watch');
+    gulp.watch(["app/**/*.ts"], { cwd : './', read:false, debounceDelay: 50 }, ['transpile:ts']);
 });
 
-gulp.task('server:browsersync', function () {  
+gulp.task('server:browsersync', function () {
     browserSync({
         server: {
             baseDir: './'
@@ -42,6 +35,8 @@ gulp.task('server:browsersync', function () {
     });
 });
 
-gulp.task('build', ['compile-ts']);
+gulp.task('build', ['transpile:ts']);
 gulp.task('default', ['build']);
-gulp.task('server', ['server:watch', 'server:browsersync']);
+gulp.task('serve', ['server:watch', 'server:browsersync']);
+gulp.task('server', ['serve']);
+
